@@ -47,9 +47,7 @@ public class ListGraph extends AbstractGraph{
   public void insert(Edge edge) {
     edges[edge.getSource()].add(edge);
     if (!isDirected()) {
-      edges[edge.getDest()].add(new Edge(edge.getDest(),
-                                         edge.getSource(),
-                                         edge.getWeight()));
+      edges[edge.getDest()].add(new Edge(edge.getDest(),edge.getSource(),edge.getWeight()));
     }
   }
 
